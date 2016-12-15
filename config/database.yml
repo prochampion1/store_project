@@ -1,0 +1,24 @@
+
+default: &default
+  adapter: postgresql
+  database: store_project
+  user: 
+  password: 
+  pool: 5
+  timeout: 5000
+
+development:
+  <<: *default
+  database: store_project
+
+test:
+  <<: *default
+  database: store_project
+
+production:
+  adapter: postgresql
+  database: store_project
+  username: 
+  password: 
+  host: localhost
+
